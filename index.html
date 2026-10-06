@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yasin Makhloufi · Geoscientist, University of Geneva</title>
+<meta name="description" content="Yasin Makhloufi, geoscientist at the University of Geneva (GE-RGBA). From the pore to the basin: reservoir geology, geothermal exploration, underground heat storage and geological CO₂ storage.">
+<meta name="author" content="Yasin Makhloufi">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Yasin Makhloufi · Geoscientist, University of Geneva">
+<meta property="og:description" content="Yasin Makhloufi, geoscientist at the University of Geneva (GE-RGBA). From the pore to the basin: reservoir geology, geothermal exploration, underground heat storage and geological CO₂ storage.">
+<meta property="og:image" content="assets/img/geneva-basin-from-jura.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23163a35'/%3E%3Crect x='7' y='7' width='18' height='4' fill='%23e6d3a8'/%3E%3Crect x='7' y='13' width='18' height='5' fill='%23b8692a'/%3E%3Crect x='7' y='20' width='18' height='5' fill='%2333413f' stroke='%23e6d3a8' stroke-width='.6'/%3E%3C/svg%3E">
+<script>
+  // apply a saved light/dark choice before the first paint (no flash)
+  try { var t = localStorage.getItem("theme"); if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,600;1,6..72,300;1,6..72,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Layout: fixed side panel (name + section menu) on deep green, content column on a pale ground.
+     Colour comes from the subject: one hue per research theme (heat, CO2, subsurface data) and a sand-to-slate ramp for the career core. */
+  :root {
+    --bg: #f4f5f2;
+    --ink: #17201e;
+    --ink-soft: #5e6964;
+    --rule: #d8ddd8;
+    --side: #163a35;        /* side panel */
+    --side-ink: #e7efe9;
+    --side-soft: #9fb8b0;
+    --accent: #b8692a;      /* ochre: active menu item, first-author mark */
+    --heat: #b9472a;        /* thermal energy & storage */
+    --co2: #2b6a93;         /* CO2 storage */
+    --data: #5f7a2e;        /* subsurface data & mapping */
+    --core-top: #e6d3a8;    /* youngest stratum */
+    --core-base: #33413f;   /* oldest stratum */
+    --link: #1f6a63;
+    --green: #1d5a4f;       /* headings, intro line, research areas */
+    --date: #9a5520;        /* years and dates (ochre, darkened for small text) */
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans: "Geist", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #111614; --ink: #e8ece8; --ink-soft: #9ba6a1; --rule: #2a322f;
+      --side: #0c201d; --side-ink: #e2ebe6; --side-soft: #86a59b; --accent: #e09a5b;
+      --heat: #e2785a; --co2: #6aa6d0; --data: #a3bd68;
+      --core-top: #5b6461; --core-base: #d9c48f; --link: #7cc3ba; --green: #8fc7b6; --date: #e09a5b; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #111614; --ink: #e8ece8; --ink-soft: #9ba6a1; --rule: #2a322f;
+    --side: #0c201d; --side-ink: #e2ebe6; --side-soft: #86a59b; --accent: #e09a5b;
+    --heat: #e2785a; --co2: #6aa6d0; --data: #a3bd68;
+    --core-top: #5b6461; --core-base: #d9c48f; --link: #7cc3ba; --green: #8fc7b6; --date: #e09a5b; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .mono { font-family: var(--mono); font-size: .8rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+
+  /* ---------- side panel ---------- */
+  .side { background: var(--side); color: var(--side-ink); padding: 1rem 16px 0; position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; }
+  .side .who { font-family: var(--serif); font-weight: 300; font-size: 1.6rem; line-height: 1.05; margin: 0; letter-spacing: -.01em; }
+  .side .who .last { text-transform: uppercase; letter-spacing: .04em; font-size: .86em; }
+  .side .status { display: none; font-family: var(--mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .09em; color: var(--accent); margin: 1rem 0 0; padding-top: .75rem; border-top: 1px solid rgba(255,255,255,.14); line-height: 1.6; }
+  .side .status span { display: block; text-transform: none; letter-spacing: .02em; color: var(--side-soft); }
+  .side .links { display: none; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .85rem; }
+  .side .links a { color: var(--side-soft); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.18); }
+  .side .links a:hover { color: var(--side-ink); border-bottom-color: var(--accent); }
+  .side .role { color: var(--side-soft); font-size: .88rem; line-height: 1.4; margin: .35rem 0 1rem; }
+  .side nav ol { list-style: none; margin: 0; padding: 0; display: flex; gap: 1.1rem; overflow-x: auto; scrollbar-width: none; }
+  .side nav a { color: var(--side-soft); text-decoration: none; font-size: .92rem; white-space: nowrap; display: block; padding-block: .55rem; border-bottom: 2px solid transparent; }
+  .side nav a:hover { color: var(--side-ink); }
+  .side nav a[aria-current="true"] { color: var(--side-ink); border-bottom-color: var(--accent); }
+  .side .foot, .side .role, .side .who br { display: none; }
+  .side .who .last { margin-left: .3em; }
+
+  @media (min-width: 900px) {
+    .shell { display: grid; grid-template-columns: 17rem minmax(0, 1fr); }
+    .side { position: sticky; top: 0; height: 100vh; padding: 3rem 2rem 2rem; display: flex; flex-direction: column; overflow-y: auto; }
+    .side .who { font-size: 2.3rem; }
+    .side .who br, .side .role, .side .status { display: block; }
+    .side .links { display: flex; flex-wrap: wrap; gap: .3rem 1rem; }
+    .meta-row .profiles { display: none; }
+    .side .who .last { margin-left: 0; }
+    .side .role { margin-bottom: 1rem; }
+    .side nav ol { flex-direction: column; gap: 0; overflow: visible; }
+    .side nav a { padding: .4rem 0 .4rem .9rem; border-bottom: 0; border-left: 2px solid rgba(255,255,255,.12); }
+    .side nav a[aria-current="true"] { border-left-color: var(--accent); }
+    .side .foot { display: block; margin-top: auto; padding-top: 2rem; font-family: var(--mono); font-size: .72rem; color: var(--side-soft); }
+  }
+  .side { position: sticky; }
+  .theme-toggle { position: absolute; top: .9rem; right: 16px; font: inherit; font-family: var(--mono); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--side-soft); background: transparent; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; padding: .3rem .7rem; cursor: pointer; display: flex; align-items: center; gap: .4rem; }
+  .theme-toggle:hover { color: var(--side-ink); border-color: rgba(255,255,255,.4); }
+  .theme-toggle svg { width: .9rem; height: .9rem; }
+  @media (min-width: 900px) { .theme-toggle { top: 1.25rem; right: 1.25rem; } }
+  .dot { width: .6rem; height: .6rem; border-radius: 50%; flex: none; display: inline-block; }
+  .t-heat { --c: var(--heat); } .t-co2 { --c: var(--co2); } .t-data { --c: var(--data); }
+  .dot { background: var(--c); }
+
+  /* ---------- content ---------- */
+  main { padding-inline: 16px; padding-block: 2.5rem 5rem; max-width: 76rem; width: 100%; margin-inline: auto; }
+  @media (min-width: 900px) { main { padding-inline: 4rem; padding-block: 4.5rem 6rem; } }
+  .lede { font-family: var(--serif); font-weight: 300; font-size: clamp(1.45rem, 3vw, 2.1rem); line-height: 1.3; max-width: none; margin: 0 0 1.25rem; text-wrap: pretty; letter-spacing: -.005em; }
+  .lede .l1 { color: var(--green); font-weight: 600; }
+  .meta-row { display: flex; flex-wrap: wrap; gap: .4rem 1.75rem; font-size: .95rem; color: var(--ink-soft); }
+  .meta-row b { color: var(--ink); font-weight: 500; }
+
+  section { padding-top: 4rem; scroll-margin-top: 7rem; }
+  @media (min-width: 900px) { section { scroll-margin-top: 2rem; } }
+  section > h2 { color: var(--green); font-family: var(--serif); font-weight: 400; font-size: 2rem; line-height: 1.1; margin: 0 0 1.25rem; padding-bottom: .75rem; border-bottom: 1px solid var(--ink); display: flex; align-items: baseline; gap: 1rem; text-wrap: balance; }
+  section > h2 small { margin-left: auto; font-family: var(--mono); font-size: .75rem; color: var(--ink-soft); font-weight: 400; }
+  h3.k { font-size: .76rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-soft); margin: 2.25rem 0 .9rem; }
+  .prose p { max-width: 44rem; margin: 0 0 1rem; }
+  .interests { color: var(--green); display: flex; flex-wrap: wrap; gap: .3rem 1.4rem; margin: 1.5rem 0 0; padding: 0; list-style: none; font-family: var(--serif); font-style: italic; font-size: 1.12rem; }
+
+  /* career core */
+  .core { list-style: none; margin: 0; padding: 0; }
+  .core > li { display: grid; grid-template-columns: 3.2rem .8rem minmax(0, 1fr); gap: 0 1.25rem; }
+  .core .age { text-align: right; padding-top: .9rem; line-height: 1.3; }
+  .core .age { color: var(--date); }
+  .core .age b { display: block; color: var(--date); font-weight: 500; }
+  .yr > .mono, .past .mono, .when { color: var(--date); }
+  .core .layer { border-bottom: 1px solid var(--bg); }
+  .core .desc { padding-block: .8rem 1.4rem; border-bottom: 1px solid var(--rule); min-width: 0; }
+  .core > li:last-child .desc { border-bottom: 0; }
+  .core h4 { margin: 0; font-size: 1.05rem; font-weight: 600; }
+  .core .org { color: var(--ink-soft); margin: 0 0 .35rem; }
+  .core ul { margin: 0; padding-left: 1rem; font-size: .95rem; }
+  .kind { font-family: var(--mono); font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); margin-left: .5rem; font-weight: 400; }
+
+  /* projects */
+  .plist { display: grid; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+  @media (min-width: 640px) { .plist { grid-template-columns: 1fr 1fr; } }
+  .proj { background: var(--bg); padding: 1.1rem 1.2rem 1.25rem; border-top: 3px solid var(--c); min-width: 0; }
+  .proj h4 { font-family: var(--serif); font-weight: 400; font-size: 1.45rem; margin: 0; line-height: 1.2; }
+  .proj p { margin: .35rem 0 .5rem; font-size: .95rem; }
+  .proj .role { font-size: .88rem; }
+  .proj .role span { font-family: var(--mono); font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); margin-right: .4rem; }
+  .theme { display: grid; gap: .9rem; margin-bottom: 2rem; }
+  .theme h3 { margin: 0; font-size: 1rem; font-weight: 600; display: flex; align-items: center; gap: .6rem; color: var(--c); }
+  .theme h3::before { content: ""; width: 1.4rem; height: 3px; background: var(--c); }
+  .theme h3 small { font-family: var(--mono); font-size: .72rem; font-weight: 400; color: var(--ink-soft); }
+  .plist.single { grid-template-columns: 1fr; }
+  .past { list-style: none; margin: 0; padding: 0; }
+  .past li { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 1rem; padding: .55rem 0; border-top: 1px solid var(--rule); font-size: .95rem; }
+  .past li:first-child { border-top: 0; }
+  .rmeta { display: block; color: var(--ink-soft); font-size: .86rem; }
+  .past b { font-weight: 500; }
+  a.ext { color: inherit; text-decoration-color: var(--rule); }
+  a.ext:hover { color: var(--link); text-decoration-color: currentColor; }
+  a.ext span { font-family: var(--mono); font-size: .7em; color: var(--link); }
+
+  /* publications */
+  .filters { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; margin-bottom: 1.25rem; }
+  .filters button { font: inherit; font-size: .95rem; background: none; border: 0; padding: 0 0 .15rem; color: var(--ink-soft); cursor: pointer; border-bottom: 2px solid transparent; }
+  .filters button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+  .filters .n { font-family: var(--mono); font-size: .75rem; margin-left: .25rem; }
+  .yr { display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 1.25rem; padding-block: .9rem; border-top: 1px solid var(--rule); }
+  .yr:first-child { border-top: 0; }
+  .yr ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+  .yr .t { font-family: var(--serif); font-size: 1.12rem; line-height: 1.35; max-width: 42rem; }
+  .yr .sub { font-size: .88rem; color: var(--ink-soft); max-width: 42rem; }
+  .yr .sub b { color: var(--accent); font-weight: 600; }
+  .type { font-family: var(--mono); font-size: .68rem; text-transform: uppercase; letter-spacing: .06em; margin-right: .4rem; }
+  .note { font-size: .85rem; color: var(--ink-soft); margin-top: 1rem; }
+  .note b { color: var(--accent); }
+
+  /* teaching + supervision */
+  .simple { list-style: none; margin: 0; padding: 0; }
+  .simple li { padding: .6rem 0; border-top: 1px solid var(--rule); }
+  .simple li:first-child { border-top: 0; padding-top: 0; }
+  .simple small { display: block; color: var(--ink-soft); font-size: .86rem; }
+  .lvl { font-family: var(--mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); margin-right: .4rem; }
+
+  /* photos */
+  figure { margin: 0; }
+  .photo { position: relative; overflow: hidden; background: var(--rule); }
+  .photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .label { font-family: var(--mono); font-size: .72rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; margin-top: .45rem; line-height: 1.45; }
+  .label b { font-family: var(--sans); font-size: .86rem; font-weight: 500; color: var(--ink); display: block; }
+  .banner { margin-bottom: 2.25rem; }
+  .banner .photo { aspect-ratio: 16 / 7; max-width: 100%; }
+  .banner .photo img { object-position: center; }
+  .split { display: grid; gap: 1.5rem 2.5rem; }
+  @media (min-width: 760px) { .split { grid-template-columns: minmax(0, 1fr) 15rem; align-items: start; } }
+  @media (min-width: 1300px) { .split { grid-template-columns: minmax(0, 44rem) minmax(15rem, 22rem); justify-content: space-between; } }
+  .split .photo { aspect-ratio: 3 / 4; max-width: 100%; }
+  .field { display: grid; gap: 1.75rem 1.25rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr)); }
+  @media (min-width: 1000px) { .field { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .field button { all: unset; cursor: zoom-in; display: block; width: 100%; }
+  .field button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .field .photo { aspect-ratio: 4 / 3; max-width: 100%; }
+  @media (prefers-reduced-motion: no-preference) { .field .photo img { transition: transform .4s ease; } .field button:hover .photo img { transform: scale(1.03); } }
+  dialog.view { border: 0; padding: 0; background: var(--bg); color: var(--ink); max-width: min(92vw, 70rem); max-height: 92vh; }
+  dialog.view::backdrop { background: rgba(10, 18, 16, .82); }
+  dialog.view img { display: block; max-width: 100%; max-height: 80vh; margin: 0 auto; }
+  dialog.view .label { padding: .6rem 1rem .9rem; margin: 0; }
+  dialog.view button { position: absolute; top: .5rem; right: .5rem; font: inherit; font-size: .85rem; background: var(--bg); color: var(--ink); border: 1px solid var(--rule); padding: .2rem .6rem; cursor: pointer; }
+
+  footer { margin-top: 5rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+<style>
+  /* base reset (the claude.ai preview supplied this; GitHub Pages does not) */
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+
+<dialog class="view" id="view" aria-label="Photo"><button type="button" id="view-close">Close</button><img id="view-img" alt=""><p class="label" id="view-cap"></p></dialog>
+<div class="shell">
+  <aside class="side">
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path id="theme-icon" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><span id="theme-label">Dark</span></button>
+    <p class="who">Yasin<br><span class="last">Makhloufi</span></p>
+    <p class="status">PhD · Maître Assistant<span>Research and Teaching Fellow</span></p>
+    <p class="role">Geoscientist<br>University of Geneva</p>
+    <ul class="links" aria-label="Profiles"><li><a href="https://www.linkedin.com/in/yasinmakh">LinkedIn</a></li><li><a href="https://orcid.org/0000-0002-7745-7696">ORCID</a></li><li><a href="https://www.researchgate.net/profile/Yasin-Makhloufi">ResearchGate</a></li></ul>
+    <nav aria-label="Sections">
+      <ol id="menu">
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#career">Career</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#field">Field</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#reports">Reports</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#supervision">Supervision</a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main>
+    <figure class="banner">
+      <div class="photo"><img src="assets/img/geneva-basin-from-jura.jpg" fetchpriority="high" alt="View from the Jura over the Pays de Gex, Lake Geneva and the Geneva Basin, with the Salève and Mont Blanc on the horizon"></div>
+      <figcaption class="label"><b>The Geneva Basin seen from the Jura</b>Pays de Gex, Lake Geneva, the Salève and Mont Blanc · 46.3630° N 6.0423° E · 1365 m · Sep 2026</figcaption>
+    </figure>
+    <p class="lede"><span class="l1">Geoscientist at the University of Geneva.</span><br>From the pore to the basin, I study how rocks become reservoirs, and how the subsurface can store heat, deliver geothermal energy or lock away CO₂.</p>
+    <div class="meta-row">
+      <div><b>PhD · Maître Assistant</b> (Research and Teaching Fellow) · <a href="https://www.unige.ch/sciences/terre/en/">Department of Earth Sciences</a>, UNIGE · <a href="https://www.unige.ch/ge-rgba/">GE-RGBA group</a></div>
+      <div class="profiles"><a href="https://www.linkedin.com/in/yasinmakh">LinkedIn</a> · <a href="https://orcid.org/0000-0002-7745-7696">ORCID</a> · <a href="https://www.researchgate.net/profile/Yasin-Makhloufi">ResearchGate</a></div>
+    </div>
+
+    <section id="profile">
+      <h2>Profile</h2>
+      <div class="split">
+        <div><div class="prose" id="summary"></div><ul class="interests" id="interests"></ul></div>
+        <figure>
+          <div class="photo"><img src="assets/img/core-bitumen.jpg" loading="lazy" alt="A hand holding a pale limestone core whose broken top shows a fracture filled with black bitumen between calcite crystals, core boxes behind"></div>
+          <figcaption class="label"><b>Lower Cretaceous limestone, bitumen in a calcite-cemented fracture</b>Drill core · Haute-Savoie · Feb 2025</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="career">
+      <h2>Career<small>youngest at the top</small></h2>
+      <ol class="core" id="core"></ol>
+    </section>
+
+    <section id="projects">
+      <h2>Projects<small id="pcount"></small></h2>
+      <div id="pcur"></div>
+      <h3 class="k">Past projects</h3>
+      <div class="split">
+        <ul class="past" id="ppast"></ul>
+        <figure>
+          <div class="photo"><img src="assets/img/drill-bit-lavey.jpg" loading="lazy" alt="A worn, rust-coloured roller-cone drill bit resting on a wooden pallet"></div>
+          <figcaption class="label"><b>Roller-cone drill bit from a deep geothermal well</b>Lavey-les-Bains · Valais · May 2022</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="field">
+      <h2>In the field<small>tap a photo to enlarge</small></h2>
+      <div class="field" id="field-grid"></div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications<small>38 in total</small></h2>
+      <div class="filters" role="group" aria-label="Filter publications" id="filters"></div>
+      <div id="pubs"></div>
+      <p class="note">My name is shown in <b>colour</b> in each author list. Five further conference presentations (AAPG, EAGE, SGM, SEPM) are not listed here.</p>
+    </section>
+
+    <section id="reports">
+      <h2>Technical reports<small id="rcount"></small></h2>
+      <ul class="past" id="reports-list"></ul>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching<small>UNIGE</small></h2>
+      <ul class="simple" id="courses"></ul>
+    </section>
+
+    <section id="supervision">
+      <h2>Supervision<small id="scount"></small></h2>
+      <ul class="simple" id="students"></ul>
+    </section>
+
+    <footer class="mono"><span>© 2026 Yasin Makhloufi · All rights reserved</span><span>Last updated October 2026</span></footer>
+  </main>
+</div>
+
+<script>
+window.CV = {
+  name: "Yasin Makhloufi",
+  title: "Dr.",
+  role: "Reservoir Geoscientist",
+  tagline: "Geothermal energy exploration & characterisation",
+  position: "Maître Assistant",
+  dept: "Department of Earth Sciences, University of Geneva",
+  group: { label: "Geo-Energy, Reservoir Geology and Basin Analysis group", url: "https://www.unige.ch/ge-rgba/" },
+  summary: [
+    "I am a geoscientist in the Department of Earth Sciences at the University of Geneva, where I work in the Geo-Energy, Reservoir Geology and Basin Analysis group (GE-RGBA). I trained in carbonate sedimentology and diagenesis, and carbonates remain my core expertise. My work now covers the whole subsurface chain, from rock samples and borehole data to basin-scale maps, so that the subsurface can serve geothermal energy, underground heat storage and geological CO₂ storage. I work mainly on the Geneva Basin, the Swiss Molasse Basin and the wider Swiss Plateau.",
+    "I am a task leader in four national and European research projects, funded by Horizon Europe, the Swiss Federal Office of Energy's SWEET programme and Innosuisse: PUSH-IT, ACHIEVE, DeCarbCH and SwissSTES. I also contribute to GEothermies, the geothermal exploration programme of the Geneva Basin led by SIG, and I am the lead point of contact for subsurface data in UNIGE's collaboration with CERN on the Future Circular Collider.",
+    "My academic path ran from a PhD at Sorbonne University, on the sedimentology and diagenesis of an oolitic carbonate reservoir, through postdoctoral positions in Paris and Dijon, to the University of Geneva in 2016, where I also teach from Bachelor to Master level and co-supervise MSc and PhD students. On the industry side, I co-founded GER (Geneva Earth Resources SA) in 2018, which carries out geothermal and petroleum-geoscience studies for energy providers, state offices and regulators in Switzerland and abroad."
+  ],
+  stats: [
+    { n: 38, label: "publications" },
+    { n: 6, label: "current projects" },
+    { n: 7, label: "courses taught" },
+    { n: 8, label: "students co-supervised" }
+  ],
+  areas: ["Carbonate diagenesis", "Reservoir characterisation", "Geothermal exploration", "UTES / ATES", "Geological CO₂ storage", "Chemostratigraphy", "GIS & multi-criteria analysis"],
+  regions: ["Geneva Basin", "Swiss Molasse", "Swiss Plateau", "Paris Basin", "Jura"],
+
+  projectsCurrent: [
+    { name: "PUSH-IT", url: "https://www.push-it-thermalstorage.eu/", funder: "Horizon Europe, GA 101096566", years: "2023–2026", role: "Task Leader", theme: "heat", scope: "Underground thermal energy storage (UTES/ATES) favourability across 6 European pilot sites, delivered as a GIS web-app (WP4, Task 4.5)." },
+    { name: "ACHIEVE", url: "https://www.sweet-achieve.ch/", funder: "Swiss SWEET, SFOE", years: "2026–2032", role: "Task Leader", theme: "co2", scope: "Carbon capture, utilisation, transport and storage and CO₂ removal. UNIGE leads WP4, geological CO₂ storage." },
+    { name: "DeCarbCH", url: "https://www.sweet-decarb.ch/", funder: "Swiss SWEET", years: "2025–2029", role: "Task Leader", theme: "heat", scope: "Hydrothermal resource and heat-storage potential in the Molasse (Task 8.4)." },
+    { name: "SwissSTES", url: "https://www.swissstes.ch/", funder: "Innosuisse Flagship", years: "2025–2028", role: "Sub-Project & Task Leader", theme: "heat", scope: "Seasonal subsurface thermal energy storage: natural-subsurface GIS layers, man-made cavity inventory, hotspot assessment." },
+    { name: "GEothermies", url: "https://www.geothermies.ch/", funder: "SIG", years: "2026–", role: "Researcher", theme: "heat", scope: "Geothermal exploration of the Geneva Basin with SIG: reservoir characterisation and stratigraphy of the basin fill, built on a basin-wide geothermal borehole database." },
+    { name: "CERN FCC", url: "https://fcc.web.cern.ch/", funder: "CERN", years: "2022–", role: "Researcher, Lead point of contact", theme: "data", scope: "Subsurface and borehole data access, stratigraphic model consolidation for the Future Circular Collider." }
+  ],
+  projectsPast: [
+    { name: "UNCONGEO", url: "https://www.aramis.admin.ch/Grunddaten/?ProjectID=40189&Sprache=en-US", funder: "OFEN/SFOE + swisstopo, GE, VD, NAGRA", years: "2021–2025", role: "Researcher", scope: "Hydrocarbon presence in the Swiss Plateau subsurface, to de-risk geothermal exploration." },
+    { name: "HEATSTORE", url: "https://www.geothermica.eu/project/heatstore", funder: "SFOE / GEOTHERMICA", years: "2018–2021", role: "Task Lead", scope: "HT-ATES in Geneva Basin Upper Jurassic carbonates: QEMSCAN mineralogy and ICP-MS geochemistry of GEo-01 and GEo-02 cuttings, and 3-D static reservoir modelling." },
+    { name: "GEothermie 2020, Upper Jurassic carbonates", url: "https://www.geothermies.ch/", funder: "SIG, UNIGE", years: "2016–2019", role: "Researcher", scope: "Diagenesis, dolomitisation and reservoir characterisation of the Upper Jurassic carbonates of the Geneva Basin." }
+  ],
+
+  // youngest first, like a log read from the top
+  career: [
+    { from: 2021, to: null, title: "Maître Assistant (Research and Teaching Fellow)", org: "University of Geneva, Department of Earth Sciences", kind: "academic",
+      points: ["I lead tasks in PUSH-IT, ACHIEVE, DeCarbCH and SwissSTES.", "I contribute to the GEothermies programme with SIG and coordinate subsurface data for the CERN FCC collaboration.", "I teach 7 courses, from Bachelor to Master, and co-supervise MSc, PhD and Certificat students."] },
+    { from: 2018, to: null, title: "Co-founder", org: "GER, Geneva Earth Resources SA", kind: "industry",
+      points: ["I co-founded GER, which provides geothermal geoscience consulting to energy providers, state offices and regulators in Switzerland and abroad."] },
+    { from: 2016, to: 2021, title: "Senior Post-Graduate Research Associate", org: "University of Geneva", kind: "academic",
+      points: ["I worked on carbonate reservoirs and deep-borehole geochemistry for geothermal exploration.", "I built GIS analyses of the Swiss Plateau and the geological database for the CERN FCC study."] },
+    { from: 2014, to: 2015, title: "Post-Graduate Researcher and Teacher", org: "Université de Bourgogne, Dijon", kind: "academic",
+      points: ["I researched and taught carbonate reservoir geology (Paris Basin, North Sea)."] },
+    { from: 2013, to: 2014, title: "Post-Graduate Researcher and Teacher", org: "Sorbonne (UPMC), Paris", kind: "academic",
+      points: ["I researched and taught carbonate reservoir geology (Paris and Vocontian basins)."] },
+    { from: 2010, to: 2013, title: "PhD in Earth Sciences + Teaching Assistant", org: "Sorbonne (UPMC), Paris", kind: "education",
+      points: ["My thesis covered the sedimentology and diagenesis of the Oolithe Blanche oolitic carbonate reservoir (Bathonian, Paris Basin). Defended on 21 November 2013."] },
+    { from: 2008, to: 2010, title: "MSc Geology, Lithosphère, Bassins, Pétrole", org: "Sorbonne (UPMC), Paris", kind: "education",
+      points: ["Graduated summa cum laude."] }
+  ],
+
+  pubs: [
+    { y: 2026, type: "journal", a: "Crinière, A., <b>Makhloufi, Y.</b>, Eruteya, O. E., Moscariello, A.", t: "Origin and composition of the Siderolithic Group, Geneva Basin (GEo-02 well).", v: "Sedimentologika, 4(1)", doi: "10.57035/journals/sdk.2026.e41.1914" },
+    { y: 2026, type: "journal", a: "Eruteya, O. E., Omodeo-Salé, S., <b>Makhloufi, Y.</b>, Moscariello, A.", t: "Leveraging 3D seismic data and analogues to reduce uncertainty in the architecture and sedimentary infill of Permo-Carboniferous grabens: Implications for geothermal exploration.", v: "Geothermics, 140, 103662", doi: "10.1016/j.geothermics.2026.103662" },
+    { y: 2025, type: "journal", a: "Benedikt, M., Zimmermann, F., Auchmann, B. et al., incl. <b>Makhloufi, Y.</b> (FCC Collaboration, 1475 authors)", t: "Future Circular Collider Feasibility Study Report: Volume 1, Physics, Experiments, Detectors.", v: "European Physical Journal C, 85, 1468", doi: "10.1140/epjc/s10052-025-15077-x" },
+    { y: 2025, type: "journal", a: "Benedikt, M., Zimmermann, F., Auchmann, B. et al., incl. <b>Makhloufi, Y.</b> (FCC Collaboration, 1474 authors)", t: "Future Circular Collider Feasibility Study Report: Volume 2, Accelerators, Technical Infrastructure and Safety.", v: "European Physical Journal Special Topics, 234, 5713–6197", doi: "10.1140/epjs/s11734-025-01967-4" },
+    { y: 2025, type: "journal", a: "Benedikt, M., Zimmermann, F., Auchmann, B. et al., incl. <b>Makhloufi, Y.</b> (FCC Collaboration, 1474 authors)", t: "Future Circular Collider Feasibility Study Report: Volume 3, Civil Engineering, Implementation and Sustainability.", v: "European Physical Journal Special Topics, 234, 5113–5383", doi: "10.1140/epjs/s11734-025-01958-5" },
+    { y: 2025, type: "conference", a: "<b>Makhloufi, Y.</b>, Omodeo Salé, S., Eruteya, O. E., Moscariello, A.", t: "Common Risk Segment mapping to de-risk geothermal exploration.", v: "European Geothermal Congress 2025" },
+    { y: 2025, type: "conference", a: "Mondino, F., Lehu, R., <b>Makhloufi, Y.</b>", t: "Exploring Geothermal Potential: Seismic Analysis and Structural Interpretation in Carbonate Rocks for Sustainable Energy Development.", v: "European Geothermal Congress 2025" },
+    { y: 2025, type: "conference", a: "Lehu, R., Mondino, F., <b>Makhloufi, Y.</b>", t: "Outcrop-based fractures and faults characterization in Carbonate Reservoirs to enhance geo-energy exploration success.", v: "European Geothermal Congress 2025" },
+    { y: 2021, type: "journal", a: "Eruteya, O. E., Guglielmetti, L., <b>Makhloufi, Y.</b>, Moscariello, A.", t: "3-D Static Model to Characterize Geothermal Reservoirs for High-Temperature Aquifer Thermal Energy Storage (HT-ATES) in the Geneva Area, Switzerland.", v: "Proceedings World Geothermal Congress 2020+1, Reykjavik" },
+    { y: 2020, type: "journal", a: "Hefny, M., Zappone, A., <b>Makhloufi, Y.</b>, de Haller, A., Moscariello, A.", t: "A laboratory approach for the calibration of seismic data in the western part of the Swiss Molasse Basin: The case history of well Humilly-2 (France) in the Geneva area.", v: "Swiss Journal of Geosciences, 113(1), 11", doi: "10.1186/s00015-020-00364-4" },
+    { y: 2020, type: "conference", a: "Guglielmetti, L., Alt-Epping, P., Birdsell, D., et al. (incl. <b>Makhloufi, Y.</b>)", t: "HEATSTORE Switzerland: New Opportunities of Geothermal District Heating Network Sustainable Growth by High Temperature Aquifer Thermal Energy Storage Development.", v: "Proceedings World Geothermal Congress 2020+1, Reykjavik" },
+    { y: 2020, type: "conference", a: "Moscariello, A., Guglielmetti, L., Omodeo-Salé, S., de Haller, A., Eruteya, O. E., Lo, H. Y., Clerc, N., <b>Makhloufi, Y.</b>, Do Couto, D., de Oliveira, G. F.", t: "Heat production and storage in Western Switzerland: an 8-years progress report.", v: "Proceedings World Geothermal Congress" },
+    { y: 2020, type: "conference", a: "Courgeon, S., <b>Makhloufi, Y.</b>, Vimpere, L., Meyer, M., Samankassou, E.", t: "Depositional environment control on the geochemical signal of ancient shallow-water carbonates (Upper Jurassic, French Jura).", v: "EGU General Assembly, 6963", doi: "10.5194/egusphere-egu2020-6963" },
+    { y: 2019, type: "journal", a: "<b>Makhloufi, Y.</b>, Samankassou, E.", t: "Geochemical constraints on dolomitization pathways of the Upper Jurassic carbonate rocks in the Geneva Basin (Switzerland and France).", v: "Swiss Journal of Geosciences, 112(2), 579–596", doi: "10.1007/s00015-019-00350-5" },
+    { y: 2019, type: "conference", a: "Morgan, L., Pierce, T., <b>Makhloufi, Y.</b>, Le Cotonnec, A., Moscariello, A.", t: "Fourier Transform Infra-Red As A Cost Efficient, Rapid Tool For Hydrothermal Exploration.", v: "AAPG European Region, Hydrocarbon Geothermal Cross Over Workshop, Geneva" },
+    { y: 2019, type: "conference", a: "Oliveira, G., Lo, H. Y., <b>Makhloufi, Y.</b>, de Haller, A., Guglielmetti, L., Moscariello, A.", t: "Reservoir Characteristics Of Lower Cretaceous Sequence Crossed By The Geo-01 Well: Potential For Direct Heat Production And Heat-Storage.", v: "AAPG European Region, Hydrocarbon Geothermal Cross Over Workshop, Geneva" },
+    { y: 2019, type: "conference", a: "<b>Makhloufi, Y.</b>, Châtelin, F., Davaud, E., Grosjean, P., Le, A.", t: "Using UAV photogrammetry for high-resolution 3D digital outcrop and reservoir models: A case study in the Jura Mountains, France.", v: "27th Meeting of Swiss Sedimentologists, Fribourg" },
+    { y: 2019, type: "conference", a: "Courgeon, S., <b>Makhloufi, Y.</b>, Meyer, M., Samankassou, E.", t: "Integrated chemostratigraphy of a Late Jurassic reef complex (Jura Mountains, France).", v: "Bathurst Meeting" },
+    { y: 2018, type: "journal", a: "<b>Makhloufi, Y.</b>, Rusillon, E., Brentini, M., Moscariello, A., Meyer, M., Samankassou, E.", t: "Dolomitization of the Upper Jurassic carbonate rocks in the Geneva Basin, Switzerland and France.", v: "Swiss Journal of Geosciences, 111(3), 475–500", doi: "10.1007/s00015-018-0311-x" },
+    { y: 2018, type: "conference", a: "Looser, N., Fernandez, A., <b>Makhloufi, Y.</b>, Samankassou, E., Moscariello, A., Bernasconi, S. M.", t: "Tracking temperature and δ¹⁸O fluid evolution during diagenesis with carbonate clumped isotopes.", v: "EGU General Assembly, 12733" },
+    { y: 2017, type: "conference", a: "Rusillon, E., Clerc, N., <b>Makhloufi, Y.</b>, Brentini, M., Moscariello, A.", t: "Geothermal prospection in the Greater Geneva Basin (Switzerland and France): Structural and reservoir quality assessment.", v: "EGU General Assembly, 9074" },
+    { y: 2017, type: "conference", a: "Cardello, G. L., Lupi, M., <b>Makhloufi, Y.</b>, et al.", t: "Fault segmentation and fluid flow in the Geneva Basin (France & Switzerland).", v: "EGU General Assembly, 18673" },
+    { y: 2017, type: "conference", a: "<b>Makhloufi, Y.</b>, Rusillon, E., Brentini, M., Clerc, N., Meyer, M., Samankassou, E.", t: "Geothermal prospection in the Greater Geneva Basin: Impact of diagenesis on reservoir properties of the Upper Jurassic carbonate sediments.", v: "EGU General Assembly, 10330" },
+    { y: 2017, type: "conference", a: "Shawwa, A. N., Chesnel, V., Šegvić, B., <b>Makhloufi, Y.</b>, Merino-Tomé, Ó., Fernández, L. P., Samankassou, E.", t: "Linking subaerial exposures to paleoenvironments and paleoclimates: Records from the Valdorria carbonate platform, northern Spain.", v: "33rd International Meeting of Sedimentology" },
+    { y: 2016, type: "journal", a: "Violette, S., Collin, P.-Y., Lagneau, V., Aubertin, F., <b>Makhloufi, Y.</b>, Charton, R., Bergerat, F.", t: "Reactive transport modelling of carbonate cementation in a deep saline aquifer, the Middle Jurassic Oolithe Blanche Formation, Paris Basin, France.", v: "Comptes Rendus Géoscience, 348(7), 540–549", doi: "10.1016/j.crte.2016.06.002" },
+    { y: 2015, type: "journal", a: "Regnet, J. B., David, C., Fortin, J., Robion, P., <b>Makhloufi, Y.</b>, Collin, P. Y.", t: "Influence of microporosity distribution on the mechanical behavior of oolitic carbonate rocks.", v: "Geomechanics for Energy and the Environment, 3, 11–23", doi: "10.1016/j.gete.2015.07.002" },
+    { y: 2013, type: "journal", a: "<b>Makhloufi, Y.</b>, Collin, P.-Y., Bergerat, F., et al.", t: "Impact of sedimentology and diagenesis on the petrophysical properties of a tight oolitic carbonate reservoir: The case of the Oolithe Blanche Formation (Bathonian, Paris Basin, France).", v: "Marine and Petroleum Geology, 48, 323–340", doi: "10.1016/j.marpetgeo.2013.08.021" },
+    { y: 2013, type: "thesis", a: "<b>Makhloufi, Y.</b>", t: "Impact de la sédimentologie et de la diagenèse sur les propriétés pétrophysiques d'un réservoir carbonaté oolithique : le cas de la formation de l'Oolithe Blanche (Bathonien, Bassin de Paris, France).", v: "Thèse de doctorat, Sorbonne (UPMC)" },
+    { y: 2013, type: "conference", a: "Issautier, B., Lasseur, E., <b>Makhloufi, Y.</b>, Collin, P.-Y., Le Nindre, Y.-M.", t: "Stratigraphie séquentielle et architecture sédimentaire haute résolution de l'Oolithe Blanche du Bassin Parisien.", v: "14ème Congrès français de sédimentologie" },
+    { y: 2013, type: "conference", a: "Charton, R., Collin, P.-Y., <b>Makhloufi, Y.</b>, Bergerat, F., Audigane, P., Lasseur, E.", t: "Signature diagénétique des formations carbonatées bathoniennes de l'ouest du Bassin de Paris.", v: "14ème Congrès français de sédimentologie" },
+    { y: 2013, type: "conference", a: "Rad, S., <b>Makhloufi, Y.</b>, Guerrot, C., Fléhoc, C., Collin, P.-Y.", t: "Sedimentary and diagenetic features of the Oolithe Blanche formation (Middle Jurassic): new contribution from Ca, Sr, C, O isotopic compositions.", v: "Goldschmidt 2013" },
+    { y: 2013, type: "conference", a: "Aubertin, F., <b>Makhloufi, Y.</b>, Violette, S., Lagneau, V., Collin, P. Y., Bergerat, F.", t: "Modélisation de l'écoulement couplé au transport réactif pour la compréhension des processus diagénétiques d'un aquifère salin profond du Bassin de Paris.", v: "Association Française de Sédimentologie" },
+    { y: 2010, type: "conference", a: "<b>Makhloufi, Y.</b>, Collin, P.-Y., Lasseur, E., et al.", t: "Paramètres diagénétiques de la formation de l'Oolithe Blanche (Bathonien, bassin de Paris). Influences sur les caractéristiques pétrophysiques.", v: "4ème congrès français de stratigraphie" }
+  ],
+
+  reports: [
+    { d: "Dec 2025", t: "SwissSTES D1.1.1: GIS layers of natural subsurface and assessment of challenges", p: "SwissSTES (Innosuisse)", r: "Lead author" },
+    { d: "Dec 2025", t: "SwissSTES D1.2.1: GIS inventory of tanks and man-made cavities", p: "SwissSTES (Innosuisse)", r: "Lead author" },
+    { d: "Sep 2025", t: "GE-RGBA CERN Activity Report 2022–2025", p: "CERN FCC / U-SOLSTISS", r: "Co-author" },
+    { d: "Apr 2025", t: "UNCONGEO: Évaluation des risques liés à la présence d'hydrocarbures pour le développement de la géothermie sur le Plateau suisse. Final report, project SI/501536", p: "OFEN/SFOE, with swisstopo, Etat de Genève, Etat de Vaud, NAGRA", r: "Co-author", url: "https://www.aramis.admin.ch/Grunddaten/?ProjectID=40189&Sprache=en-US" },
+    { d: "Jan 2025", t: "SwissSTES D2.2.1: Hotspot assessment methods and generic maps (interim)", p: "SwissSTES (Innosuisse)", r: "Co-author" },
+    { d: "May 2024", t: "PUSH-IT T4.5 Activity Report, M16: Spatial MCA for sustainable development", p: "PUSH-IT (Horizon Europe)", r: "Lead author" },
+    { d: "Apr 2024", t: "DeCarbCH final report: MCA for geothermal energy planning to reduce CO₂ emissions in Switzerland", p: "DeCarbCH (SWEET)", r: "Co-author" },
+    { d: "Nov 2022", t: "3D geological modelling in support of CERN's FCC ~100-km tunnel infrastructure (GEG2018003)", p: "CERN FCC", r: "Co-author" },
+    { d: "Apr 2022", t: "UNCONGEO GIS database: user manual", p: "UNIGE", r: "Sole author" },
+    { d: "Jun 2020", t: "HEATSTORE: Swiss consortium report 2020, contract SI/501725-01", p: "HEATSTORE (SFOE / GEOTHERMICA)", r: "Co-author (UNIGE section)" },
+    { d: "Aug 2016", t: "Rapport d'activité, Projet Dolomite", p: "UNIGE (SIG, GEothermie 2020)", r: "Sole author" },
+    { d: "Jun 2010", t: "Hétérogénéités pétrophysiques, diagénétiques et sédimentologiques de l'Oolithe Blanche", p: "UPMC / BRGM", r: "Sole author" }
+  ],
+
+  teaching: [
+    { t: "Geo-Energy Exploration & Development Workflow", lvl: "Master ELSTE", role: "Main instructor" },
+    { t: "Economics and Management of Earth Resources Exploration and Development", lvl: "Master ELSTE", role: "Co-instructor" },
+    { t: "SPACE GeoEnergy (Géomatique et géo-énergies)", lvl: "Certificat en géomatique", role: "Sole instructor" },
+    { t: "BSc3 Research Project (Projet de recherche ou stage)", lvl: "Bachelor 3", role: "Pedagogic team, from Fall 2026" },
+    { t: "Ressources naturelles, incl. Hydrocarbons & CCS", lvl: "Bachelor", role: "Co-instructor" },
+    { t: "Planète Terre I", lvl: "Bachelor", role: "Co-instructor" },
+    { t: "Géologie régionale, field excursions Jura to Pre-Alps", lvl: "Bachelor 1", role: "Co-instructor" }
+  ],
+
+  students: [
+    { n: "Emeryc Tedjani", lvl: "MSc", t: "Stratigraphy, depositional environment and reservoir characterization of the Lower Cretaceous in the Geneva Basin", s: "Ongoing" },
+    { n: "Alejandro Noda", lvl: "MSc", t: "Caractérisation du réservoir Quaternaire dans le bassin genevois", s: "2026" },
+    { n: "Thimothé Antonelli", lvl: "MSc", t: "Molasse rouge et grise (USM) dans la partie ouest du Bassin Genevois", s: "2026" },
+    { n: "Nadine Frossard", lvl: "Certificat", t: "Cartographie des aquifères fissurés, flyschs du Val d'Illiez", s: "2025" },
+    { n: "Aurélia Crinière", lvl: "PhD", t: "Reservoir geology of the Cretaceous-Paleogene transition in the Geneva Basin applied to geothermal exploration", s: "2024" },
+    { n: "Maria Sabogal", lvl: "Certificat", t: "Extraction de données pour l'analyse énergétique des bâtiments à Genève", s: "2024" },
+    { n: "Gustavo De Oliveira", lvl: "MSc", t: "Chemostratigraphy and petrology of the Mesozoic sequence crossed by the GEo-01 well", s: "2020" },
+    { n: "Kristy Lo Hong Min", lvl: "MSc", t: "Discrete fracture network modelling in the Geneva Basin (Lower Cretaceous carbonates)", s: "2020" }
+  ]
+};
+</script>
+<script>
+  var C = window.CV, $ = function (id) { return document.getElementById(id); };
+  var NOW = 2026, START = 2008;
+  // career stratum colour: youngest = sand (top), oldest = slate (base)
+  function tone(year) { var f = (NOW - year) / (NOW - START); return "color-mix(in oklab, var(--core-base) " + Math.round(f * 100) + "%, var(--core-top))"; }
+  var kindLabel = { academic: "research & teaching", industry: "industry", education: "education" };
+
+  $("summary").innerHTML = C.summary.map(function (p) { return "<p>" + p + "</p>"; }).join("");
+  $("interests").innerHTML = C.areas.map(function (a) { return "<li>" + a + "</li>"; }).join("");
+
+  $("core").innerHTML = C.career.map(function (c) {
+    var to = c.to || NOW, h = 3 + Math.min(4, Math.max(1, to - c.from)) * 0.9;
+    return '<li style="min-height:' + h + 'rem"><div class="age mono"><b>' + (c.to || "now") + "</b>" + c.from + '</div><div class="layer" style="background:' + tone((c.from + to) / 2) +
+      '"></div><div class="desc"><h4>' + c.title + '<span class="kind">' + kindLabel[c.kind] + '</span></h4><p class="org">' + c.org + "</p><ul>" +
+      c.points.map(function (p) { return "<li>" + p + "</li>"; }).join("") + "</ul></div></li>";
+  }).join("");
+
+  $("pcount").textContent = C.projectsCurrent.length + " current · " + C.projectsPast.length + " past";
+  // project name, linked to its public page when there is one
+  function link(p) { return p.url ? '<a class="ext" href="' + p.url + '">' + p.name + '<span aria-hidden="true"> ↗</span></a>' : p.name; }
+  var THEMES = [["heat", "Geothermal energy & heat storage"], ["co2", "Geological CO₂ storage"], ["data", "Subsurface data & mapping"]];
+  $("pcur").innerHTML = THEMES.map(function (th) {
+    var list = C.projectsCurrent.filter(function (p) { return p.theme === th[0]; });
+    return '<div class="theme t-' + th[0] + '"><h3>' + th[1] + "<small>" + list.length + "</small></h3>" +
+      '<div class="plist' + (list.length === 1 ? " single" : "") + '">' + list.map(function (p) {
+        return '<div class="proj"><h4>' + link(p) + '</h4><div class="mono">' + p.funder + ' · <span class="when">' + p.years + "</span></div><p>" + p.scope +
+          '</p><div class="role"><span>Role</span>' + p.role + "</div></div>";
+      }).join("") + "</div></div>";
+  }).join("");
+  $("ppast").innerHTML = C.projectsPast.map(function (p) {
+    return '<li><span class="mono">' + p.years + "</span><span><b>" + link(p) + "</b>, " + p.role.toLowerCase() + ". " + p.scope + "</span></li>";
+  }).join("");
+
+  var types = [["all", "All"], ["journal", "Journal articles"], ["conference", "Conferences"], ["thesis", "Thesis"]];
+  $("filters").innerHTML = types.map(function (t, i) {
+    var n = t[0] === "all" ? C.pubs.length : C.pubs.filter(function (p) { return p.type === t[0]; }).length;
+    return '<button type="button" id="f-' + t[0] + '" data-f="' + t[0] + '" aria-pressed="' + (i === 0) + '">' + t[1] + '<span class="n">' + n + "</span></button>";
+  }).join("");
+  function renderPubs(f) {
+    var list = C.pubs.filter(function (p) { return f === "all" || p.type === f; }), years = [];
+    list.forEach(function (p) { if (years.indexOf(p.y) < 0) years.push(p.y); });
+    $("pubs").innerHTML = years.map(function (y) {
+      return '<div class="yr"><div class="mono">' + y + "</div><ol>" + list.filter(function (p) { return p.y === y; }).map(function (p) {
+        return '<li><div class="t">' + p.t + '</div><div class="sub">' + p.a + " · <i>" + p.v + "</i>" +
+          (p.doi ? ' · <a href="https://doi.org/' + p.doi + '">doi</a>' : "") + "</div></li>";
+      }).join("") + "</ol></div>";
+    }).join("");
+  }
+  renderPubs("all");
+  document.querySelectorAll("#filters button").forEach(function (b) {
+    b.onclick = function () {
+      document.querySelectorAll("#filters button").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+      renderPubs(b.dataset.f);
+    };
+  });
+
+  $("rcount").textContent = C.reports.length + " reports";
+  $("reports-list").innerHTML = C.reports.map(function (r) {
+    var title = r.url ? '<a class="ext" href="' + r.url + '">' + r.t + '<span aria-hidden="true"> ↗</span></a>' : r.t;
+    return '<li><span class="mono">' + r.d + "</span><span><b>" + title + '</b><small class="rmeta">' + r.p + " · " + r.r + "</small></span></li>";
+  }).join("");
+
+  $("courses").innerHTML = C.teaching.map(function (t) { return '<li>' + t.t + '<small><span class="lvl">' + t.lvl + "</span>" + t.role + "</small></li>"; }).join("");
+  $("scount").textContent = C.students.length + " students co-supervised";
+  $("students").innerHTML = C.students.map(function (s) {
+    return '<li>' + s.n + '<small><span class="lvl">' + s.lvl + "</span>" + (s.s === "Ongoing" ? "ongoing" : s.s) + " · " + s.t + "</small></li>";
+  }).join("");
+
+  var FIELD = [
+    { src: "assets/img/jura-rochers-de-beloz.jpg", t: "Upper Oxfordian–Kimmeridgian limestones", m: "Rochers de Beloz, Tacon · southern Jura · 46.1681° N 5.7567° E · 447 m · May 2026", alt: "A pale, well-bedded limestone cliff above a forested slope" },
+    { src: "assets/img/jallouvre-bornes.jpg", t: "Urgonian limestones, Bargy anticline", m: "Pic de Jallouvre · Bornes, Haute-Savoie · 46.0016° N 6.4684° E · 2084 m · Aug 2024", alt: "Pale limestone cliffs of the Pic de Jallouvre above a green alpine slope" },
+    { src: "assets/img/aravis-vertical-beds.jpg", t: "Steeply dipping Senonian limestones and nummulitic limestone bar", m: "Lac du Charvin · Aravis, Haute-Savoie · 45.8080° N 6.4212° E · 2049 m · Aug 2023", alt: "The north face of Mont Charvin: thin, steeply dipping limestone beds with a massive limestone bar on the right" },
+    { src: "assets/img/sicily-maranfusa-inici.jpg", t: "Lower Jurassic Inici platform limestones capped by an Fe–Mn crust", m: "Monte Maranfusa quarry, Roccamena · western Sicily · 37.8558° N 13.1278° E · 278 m · Apr 2026", alt: "Stepped walls of an abandoned limestone quarry, grass on the benches" },
+    { src: "assets/img/jura-col-de-crozet.jpg", t: "Upper Jurassic limestones", m: "Col de Crozet · Jura, Pays de Gex · 46.2906° N 5.9813° E · 1335 m · Sep 2024", alt: "A grassy Jura ridge with thin limestone beds exposed, cows resting in the foreground", pos: "center 45%" },
+    { src: "assets/img/sicily-folded-gypsum.jpg", t: "Messinian gypsum, folded in the Monte Grande anticline", m: "Pietraperzia · central Sicily · 37.3967° N 14.0639° E · 204 m · Apr 2026", alt: "A rocky ridge of folded gypsum above green fields under a blue sky", pos: "center 70%" }
+  ];
+  $("field-grid").innerHTML = FIELD.map(function (f, i) {
+    return '<figure><button type="button" data-i="' + i + '" aria-label="Enlarge: ' + f.t + '"><div class="photo"><img loading="lazy" src="' + f.src + '" alt="' + f.alt + '"' +
+      (f.pos ? ' style="object-position:' + f.pos + '"' : "") + '></div></button><figcaption class="label"><b>' + f.t + "</b>" + f.m + "</figcaption></figure>";
+  }).join("");
+  var view = $("view");
+  $("field-grid").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-i]"); if (!b) return;
+    var f = FIELD[+b.dataset.i];
+    $("view-img").src = f.src; $("view-img").alt = f.alt; $("view-cap").innerHTML = "<b>" + f.t + "</b>" + f.m;
+    if (view.showModal) view.showModal();
+  });
+  $("view-close").onclick = function () { view.close(); };
+  view.addEventListener("click", function (e) { if (e.target === view) view.close(); });
+
+  // night mode toggle: follows the system setting until the visitor chooses; the choice is remembered in this browser
+  (function () {
+    var root = document.documentElement, btn = $("theme-toggle"), mq = window.matchMedia("(prefers-color-scheme: dark)");
+    var MOON = "M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z",
+        SUN = "M12 4V2M12 22v-2M4 12H2M22 12h-2M5.6 5.6 4.2 4.2M19.8 19.8l-1.4-1.4M5.6 18.4l-1.4 1.4M19.8 4.2l-1.4 1.4M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z";
+    try { var saved = localStorage.getItem("theme"); if (saved === "dark" || saved === "light") root.setAttribute("data-theme", saved); } catch (e) {}
+    function isDark() { var t = root.getAttribute("data-theme"); return t ? t === "dark" : mq.matches; }
+    function paint() {
+      var d = isDark();
+      $("theme-label").textContent = d ? "Light" : "Dark";
+      $("theme-icon").setAttribute("d", d ? SUN : MOON);
+      btn.setAttribute("aria-pressed", d);
+      btn.setAttribute("aria-label", d ? "Switch to light mode" : "Switch to dark mode");
+    }
+    btn.onclick = function () {
+      var next = isDark() ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+      paint();
+    };
+    if (mq.addEventListener) mq.addEventListener("change", paint);
+    paint();
+  })();
+
+  // highlight the menu entry of the section being read
+  (function () {
+    var links = {}, ids = [];
+    document.querySelectorAll("#menu a").forEach(function (a) { var id = a.getAttribute("href").slice(1); links[id] = a; ids.push(id); });
+    function update() {
+      var current = ids[0];
+      ids.forEach(function (id) { if (document.getElementById(id).getBoundingClientRect().top < window.innerHeight * 0.3) current = id; });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) current = ids[ids.length - 1];
+      ids.forEach(function (id) { links[id].setAttribute("aria-current", id === current); });
+      var a = links[current]; if (a && a.scrollIntoView && window.innerWidth < 900) a.parentNode.parentNode.scrollLeft = a.offsetLeft - 16;
+    }
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  })();
+</script>
+
+</body>
+</html>
